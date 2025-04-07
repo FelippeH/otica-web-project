@@ -1,1 +1,1 @@
-# otica_web
+Projeto ótica utilizando react
