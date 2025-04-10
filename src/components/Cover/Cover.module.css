@@ -1,33 +1,46 @@
-.main {
+.carousel {
   position: relative;
-  height: 760px;
   width: 100%;
+  height: 640px;
   overflow: hidden;
-  z-index: 0;
 }
 
-.cover {
-  object-fit: cover;
-  z-index: 0;
-}
-
-.text {
+.slide {
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 35%;
+  left: 50%;
   transform: translateX(-50%);
+  text-align: center;
   color: white;
-  display: flex;
-  flex-direction: column;
-  max-width: 380px;
+  z-index: 2;
 }
 
-.text p {
-  margin: 8px 0;
-  font-size: 1.8rem;
+.textOverlay p {
+  margin: 10px 0;
+  font-size: 1.2rem;
 }
 
-.text h1 {
-  margin: 12px 0;
-  font-size: 3rem;
+.textOverlay h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
 }
