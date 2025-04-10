@@ -1,0 +1,33 @@
+.main {
+  position: relative;
+  height: 760px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cover {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.text {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+}
+
+.text p {
+  margin: 8px 0;
+  font-size: 1.8rem;
+}
+
+.text h1 {
+  margin: 12px 0;
+  font-size: 3rem;
+}
