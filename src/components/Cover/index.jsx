@@ -9,24 +9,28 @@ const slides = [
     title: "ÓCULOS DE GRAU E DE SOL",
     subtitle: "Preços baixos em",
     description: "Você só encontra aqui",
+    textClass: "slideText1",
   },
   {
     image: "/cover2.jpg",
-    title: "LENTES COM DESCONTO",
+    title: "LENTES COM DESCONTOS",
     subtitle: "Ofertas exclusivas em",
     description: "Aproveite agora mesmo",
+    textClass: "slideText2",
   },
   {
     image: "/cover3.jpg",
-    title: "NOVIDADES EM ARMAÇÕES",
-    subtitle: "Chegaram os lançamentos",
-    description: "Modelos modernos e estilosos",
-  },
-  {
-    image: "/cover4.jpg",
     title: "COMPRE SEM SAIR DE CASA",
     subtitle: "Facilidade e conforto",
     description: "Peça já pelo nosso site",
+    textClass: "slideText3",
+  },
+  {
+    image: "/cover4.jpg",
+    title: "PROTEJA SUA VISÃO COM ESTILO",
+    subtitle: "As melhores marcas em promoção",
+    description: "Descubra o modelo ideal pra você",
+    textClass: "slideText4",
   },
 ];
 
@@ -71,10 +75,12 @@ export default function Cover() {
           />
 
           {index === currentIndex && (
-            <div className={styles.textOverlay}>
-              <p>{slide.subtitle}</p>
-              <h1>{slide.title}</h1>
-              <p>{slide.description}</p>
+            <div className={`${styles.textOverlay} ${styles[slide.textClass]}`}>
+              <div className={styles.textGroup}>
+                <p>{slide.subtitle}</p>
+                <h1>{slide.title}</h1>
+                <p>{slide.description}</p>
+              </div>
             </div>
           )}
         </div>
