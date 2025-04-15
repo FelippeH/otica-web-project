@@ -35,7 +35,7 @@
 
 .menu {
   display: flex;
-  gap: 44px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -43,7 +43,7 @@
   font-family: Tahoma;
   color: #000000;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.93rem;
   font-weight: 600;
   letter-spacing: 0.15rem;
 }
