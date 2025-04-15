@@ -2,7 +2,33 @@ import styles from "./Cover.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = ["/cover1.jpg", "/cover2.jpg", "/cover3.jpg", "/cover4.jpg"]; //Array de imagens utilizadas no carrossel da página//
+//Array de imagens utilizadas no carrossel da página//
+const slides = [
+  {
+    image: "/cover1.jpg",
+    title: "ÓCULOS DE GRAU E DE SOL",
+    subtitle: "Preços baixos em",
+    description: "Você só encontra aqui",
+  },
+  {
+    image: "/cover2.jpg",
+    title: "LENTES COM DESCONTO",
+    subtitle: "Ofertas exclusivas em",
+    description: "Aproveite agora mesmo",
+  },
+  {
+    image: "/cover3.jpg",
+    title: "NOVIDADES EM ARMAÇÕES",
+    subtitle: "Chegaram os lançamentos",
+    description: "Modelos modernos e estilosos",
+  },
+  {
+    image: "/cover4.jpg",
+    title: "COMPRE SEM SAIR DE CASA",
+    subtitle: "Facilidade e conforto",
+    description: "Peça já pelo nosso site",
+  },
+];
 
 export default function Cover() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +37,7 @@ export default function Cover() {
   //Aqui faço o uso do setInterval para cronometrar o tempo da imagem do banner na tela//
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, intervalTime);
 
     return () => clearInterval(interval);
@@ -19,17 +45,17 @@ export default function Cover() {
 
   //Aqui a função de setas, permitindo avançar e voltar a imagem do banner//
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
   const goToPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   //Aqui se inicia a parte visual da página, utilizando um modo carrossel nas imagens do banner//
   return (
     <div className={styles.carousel}>
-      {images.map((img, index) => (
+      {slides.map((slide, index) => (
         <div
           key={index}
           className={`${styles.slide} ${
@@ -37,7 +63,7 @@ export default function Cover() {
           }`}
         >
           <Image
-            src={img}
+            src={slide.image}
             alt={`Slide ${index}`}
             fill
             className={styles.image}
@@ -46,9 +72,9 @@ export default function Cover() {
 
           {index === currentIndex && (
             <div className={styles.textOverlay}>
-              <p>Preços baixos em</p>
-              <h1>ÓCULOS DE GRAU E DE SOL</h1>
-              <p>Você só encontra aqui</p>
+              <p>{slide.subtitle}</p>
+              <h1>{slide.title}</h1>
+              <p>{slide.description}</p>
             </div>
           )}
         </div>
