@@ -1,4 +1,101 @@
-.main {
-  position: relative;
+.box {
+  display: flex;
+  background-color: #74705f;
+  width: 100%;
+  height: 80px;
+  flex-direction: row;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.box h2 {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.box p {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.productsSection {
+  background-color: #f8f8f8;
+  height: 1080px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 40px;
   text-align: center;
+  color: #333;
+  font-family: Tahoma;
+  letter-spacing: 0.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  padding: 0 160px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #eeeeeec9;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  border: 1px solid #cacaca;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.hoverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.03s ease;
+}
+
+.card:hover .image {
+  opacity: 0;
+}
+
+.card:hover .hoverImage {
+  opacity: 1;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 8px 0 4px;
+  font-weight: 600;
+  font-family: Tahoma;
+}
+
+.price {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #555;
 }

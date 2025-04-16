@@ -36,7 +36,7 @@ const slides = [
 
 export default function Cover() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [intervalTime, setIntervalTime] = useState(7000);
+  const [intervalTime, setIntervalTime] = useState(7500);
 
   //Aqui faço o uso do setInterval para cronometrar o tempo da imagem do banner na tela//
   useEffect(() => {
