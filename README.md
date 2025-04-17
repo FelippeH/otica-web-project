@@ -1,2 +1,3 @@
-Projeto Ótica
-Esse projeto foi criado em React com Next.js
+Óticas Aurora - Empresa fictícia
+
+Projeto criado em React com Next.js
