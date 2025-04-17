@@ -1,3 +1,15 @@
+.productsSection {
+  background-color: #f8f8f8;
+  height: 1080px;
+  width: 100%;
+}
+
+.textHeader h1 {
+  padding: 40px 160px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .box {
   display: flex;
   background-color: #74705f;
@@ -19,11 +31,6 @@
   font-size: 0.9rem;
 }
 
-.productsSection {
-  background-color: #f8f8f8;
-  height: 1080px;
-}
-
 .sectionTitle {
   font-size: 2rem;
   margin-bottom: 40px;
@@ -37,7 +44,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  margin-top: 60px;
   padding: 0 160px;
 }
 
@@ -60,8 +66,8 @@
 
 .imageWrapper {
   position: relative;
+  aspect-ratio: 1/1;
   width: 100%;
-  height: 200px;
   margin-bottom: 12px;
   border-radius: 8px;
   overflow: hidden;
@@ -101,7 +107,10 @@
 }
 
 .bannerInf {
+  object-fit: cover;
+  width: auto;
   margin: 60px 0;
+  cursor: pointer;
 }
 
 .gridInf {
