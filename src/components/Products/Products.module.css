@@ -104,6 +104,7 @@
   font-size: 0.95rem;
   font-weight: bold;
   color: #555;
+  text-decoration: line-through;
 }
 
 .bannerInf {
