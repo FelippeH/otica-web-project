@@ -5,6 +5,14 @@
   font-family: "Arial", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .preload {
   width: 50px;
   height: 50px;
@@ -13,4 +21,10 @@
   border: 20px solid rgba(94, 94, 94, 0.466);
   border-bottom: 20px solid transparent;
   animation: loading 1s linear infinite;
+}
+
+/* Uso de Custom Properties para uma melhor organização das propriedades de cores e padrões */
+:root {
+  --bg-primary: #e3ca9d;
+  --menu-color: #eeeeee;
 }
