@@ -174,6 +174,7 @@ export default function Products() {
                 fill
                 className={styles.image}
               />
+              <div className={styles.discountBadge}>-20%</div>
               {product.hoverImage && (
                 <Image
                   src={product.hoverImage}
