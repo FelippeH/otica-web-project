@@ -107,9 +107,26 @@
   text-decoration: line-through;
 }
 
+.discountBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #cf3d3d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/*Estilização da seção dos óculos de sol*/
 .bannerInf {
+  position: relative;
+  height: auto;
+  aspect-ratio: 1920 / 500;
   object-fit: cover;
-  width: auto;
+  width: 100%;
   margin: 60px 0;
   cursor: pointer;
 }
