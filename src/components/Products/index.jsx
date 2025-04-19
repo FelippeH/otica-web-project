@@ -209,31 +209,29 @@ export default function Products() {
         />
       </div>
       {/* Grid do catálogo de óculos de sol */}
-      <div className={styles.sunGlass}>
-        <div className={styles.gridInf}>
-          {pSunglass.map((product2) => (
-            <Link key={product2.id} href={""} className={styles.cardInf}>
-              <div className={styles.imageWrapper}>
+      <div className={styles.gridInf}>
+        {pSunglass.map((product2) => (
+          <Link key={product2.id} href={""} className={styles.card}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src={product2.image}
+                alt={product2.title}
+                fill
+                className={styles.image}
+              />
+              {product2.hoverImage && (
                 <Image
-                  src={product2.image}
+                  src={product2.hoverImage}
                   alt={product2.title}
                   fill
-                  className={styles.image}
+                  className={`${styles.image} ${styles.hoverImage}`}
                 />
-                {product2.hoverImage && (
-                  <Image
-                    src={product2.hoverImage}
-                    alt={product2.title}
-                    fill
-                    className={`${styles.image} ${styles.hoverImage}`}
-                  />
-                )}
-              </div>
-              <h3 className={styles.title}>{product2.title}</h3>
-              <p className={styles.price}>{product2.price}</p>
-            </Link>
-          ))}
-        </div>
+              )}
+            </div>
+            <h3 className={styles.title}>{product2.title}</h3>
+            <p className={styles.price}>{product2.price}</p>
+          </Link>
+        ))}
       </div>
     </section>
   );
