@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
 import Cover from "@/components/Cover";
 import Products from "@/components/Products";
+import PromoEmail from "@/components/PromoEmail";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function Home() {
         <Header />
         <Cover />
         <Products />
+        <PromoEmail />
       </header>
     </div>
   );
