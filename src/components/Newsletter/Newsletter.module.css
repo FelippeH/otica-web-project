@@ -9,15 +9,26 @@
 .box {
   display: flex;
   flex-direction: column;
-  width: 1200px;
+  width: 1400px;
   height: 300px;
   align-items: center;
   justify-content: center;
   background-color: var(--menu-color);
 }
 
+.box h1 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+  color: #cf1a1a;
+}
+
+.box p {
+  font-size: 1.05rem;
+}
+
 .textInput {
-  margin-top: 40px;
+  margin: 30px;
 }
 
 .textInput form {
@@ -28,9 +39,22 @@
   flex-wrap: wrap;
 }
 
+.textInput button {
+  color: #ffffff;
+  background-color: #cf1a1a;
+  font-weight: 600;
+}
+
 .textInput input,
 .textInput button {
-  padding: 12px 16px;
-  width: 200px;
+  padding: 10px 16px;
+  width: 280px;
   font-size: 16px;
+  border-radius: 7px;
+  border: none;
+}
+
+.textInput button {
+  cursor: pointer;
+  width: 140px;
 }

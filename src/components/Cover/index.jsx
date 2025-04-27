@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Cover.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
