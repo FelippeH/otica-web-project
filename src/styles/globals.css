@@ -26,5 +26,5 @@ body {
 /* Uso de Custom Properties para uma melhor organização das propriedades de cores e padrões */
 :root {
   --bg-primary: #e3ca9d;
-  --menu-color: #eeeeee;
+  --menu-color: #ebe9e3;
 }
