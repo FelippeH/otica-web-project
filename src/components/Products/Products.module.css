@@ -1,7 +1,8 @@
 .productsSection {
   background-color: #f8f8f8;
-  height: 1080px;
+  min-height: 1080px;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 .textHeader h1 {
