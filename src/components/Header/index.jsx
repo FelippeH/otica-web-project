@@ -15,13 +15,19 @@ export default function Header() {
       />
       <div className={styles.menu}>
         <Link href="#produtos" className={styles.link}>
-          PRODUTOS
+          LANÇAMENTOS
         </Link>
         <Link href="#sobre" className={styles.link}>
-          SOBRE
+          ÓCULOS DE GRAU
         </Link>
         <Link href="#contato" className={styles.link}>
-          CONTATO
+          ÓCULOS DE SOL
+        </Link>
+        <Link href="#contato" className={styles.link}>
+          LENTES DE CONTATO
+        </Link>
+        <Link href="#contato" className={styles.link}>
+          ACESSÓRIOS
         </Link>
       </div>
       <div className={styles.icons}>

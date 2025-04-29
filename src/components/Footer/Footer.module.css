@@ -1,0 +1,10 @@
+.mainContainer {
+  display: flex;
+  background-color: var(--menu-color);
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  color: #000000;
+}

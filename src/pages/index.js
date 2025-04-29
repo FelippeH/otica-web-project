@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Cover from "@/components/Cover";
 import Products from "@/components/Products";
 import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function Home() {
         <Cover />
         <Products />
         <Newsletter />
+        <Footer />
       </header>
     </div>
   );
