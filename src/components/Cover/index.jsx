@@ -8,30 +8,18 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     image: "/cover1.jpg",
-    title: "ÓCULOS DE GRAU E DE SOL",
-    subtitle: "Preços baixos em",
-    description: "Você só encontra aqui",
     textClass: "slideText1",
   },
   {
     image: "/cover2.jpg",
-    title: "LENTES COM DESCONTOS",
-    subtitle: "Ofertas exclusivas em",
-    description: "Aproveite agora mesmo",
     textClass: "slideText2",
   },
   {
     image: "/cover3.jpg",
-    title: "COMPRE SEM SAIR DE CASA",
-    subtitle: "Facilidade e conforto",
-    description: "Peça já pelo nosso site",
     textClass: "slideText3",
   },
   {
     image: "/cover4.jpg",
-    title: "PROTEJA SUA VISÃO COM ESTILO",
-    subtitle: "As melhores marcas em promoção",
-    description: "Descubra o modelo ideal pra você",
     textClass: "slideText4",
   },
 ];
@@ -87,13 +75,6 @@ export default function Cover() {
           )}
         </div>
       ))}
-
-      <button className={styles.prev} onClick={goToPrev}>
-        &#10094;
-      </button>
-      <button className={styles.next} onClick={goToNext}>
-        &#10095;
-      </button>
     </div>
   ); //Botões utilizados para navegar entre as imagens do carrossel//
 }

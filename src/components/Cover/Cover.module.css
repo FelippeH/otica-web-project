@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 660px;
   overflow: hidden;
   cursor: pointer;
@@ -29,56 +29,6 @@
 
 .image {
   object-fit: cover;
-}
-
-.textGroup {
-  display: flex;
-  flex-direction: column;
-}
-
-.textOverlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  color: rgb(54, 54, 54);
-  z-index: 2;
-}
-
-.textOverlay p {
-  margin: 10px 0;
-  font-size: 1.5rem;
-  color: rgb(90, 88, 88);
-}
-
-.textOverlay h1 {
-  font-size: 3rem;
-  margin: 10px 0;
-  color: rgb(39, 37, 37) 50%;
-}
-
-/*estilizando os textos individualmente dentro da capa*/
-
-.slideText1,
-.slideText3 {
-  position: absolute;
-  color: rgb(39, 37, 37);
-  transform: translateY(-50%);
-  left: 10%;
-  top: 50%;
-  width: 210px;
-  text-align: left;
-}
-
-.slideText2,
-.slideText4 {
-  position: absolute;
-  color: rgb(39, 37, 37);
-  transform: translateY(-50%);
-  right: 10%;
-  top: 50%;
-  width: 210px;
-  text-align: right;
 }
 
 .prev,
