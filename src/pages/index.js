@@ -1,12 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import Header from "@/components/Header";
-import Cover from "@/components/Cover";
-import Products from "@/components/Products";
-import Newsletter from "@/components/Newsletter";
-import Footer from "@/components/Footer";
+import HomeContent from "@/components/HomeContent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/faviconYellow.png" />
       </Head>
-
-      <header>
-        <Header />
-        <Cover />
-        <Products />
-        <Newsletter />
-        <Footer />
-      </header>
+      <HomeContent />
     </div>
   );
 }
