@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./Cover.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -26,7 +24,7 @@ const slides = [
 
 export default function Cover() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [intervalTime, setIntervalTime] = useState(7500);
+  const intervalTime = 7500;
 
   //Aqui faço o uso do setInterval para cronometrar o tempo da imagem do banner na tela//
   useEffect(() => {
@@ -36,15 +34,6 @@ export default function Cover() {
 
     return () => clearInterval(interval);
   }, [intervalTime, currentIndex]);
-
-  //Aqui a função de setas, permitindo avançar e voltar a imagem do banner//
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const goToPrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
 
   //Aqui se inicia a parte visual da página, utilizando um modo carrossel nas imagens do banner//
   return (
