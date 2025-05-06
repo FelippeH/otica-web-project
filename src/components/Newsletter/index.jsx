@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./Newsletter.module.css";
-import Image from "next/image";
 import React, { useRef } from "react";
 
 export default function Newsletter() {
@@ -16,6 +15,10 @@ export default function Newsletter() {
   const emailRef = useRef(null);
   const nameRef = useRef(null);
 
+  function exibirAlert() {
+    alert("Cadastro realizado com sucesso!");
+  }
+
   return (
     <section className={styles.main}>
       <div className={styles.box}>
@@ -28,7 +31,7 @@ export default function Newsletter() {
           <form onSubmit={handleSubmit}>
             <input type="name" placeholder="Nome*" ref={nameRef} required />
             <input type="email" placeholder="Email*" ref={emailRef} required />
-            <button type="submit">Registrar</button>
+            <button onClick={exibirAlert}>Registrar</button>
           </form>
         </div>
       </div>
