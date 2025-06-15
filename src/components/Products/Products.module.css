@@ -108,6 +108,7 @@
   text-decoration: line-through;
 }
 
+/*Produtos com desconto*/
 .discountBadge {
   position: absolute;
   top: 8px;
