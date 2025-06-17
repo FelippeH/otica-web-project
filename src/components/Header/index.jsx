@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className={styles.container}>
+    <div className={styles.container}>
       <Image
         src={logo}
         alt="Logo da empresa"
@@ -35,6 +35,6 @@ export default function Header() {
         <i className="fas fa-user"></i>
         <i className="fas fa-cart-shopping"></i>
       </div>
-    </header>
+    </div>
   );
 }

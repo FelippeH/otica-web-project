@@ -5,11 +5,12 @@
   padding: 0 clamp(20px, 10vw, 180px);
   background-color: var(--menu-color);
   color: #000000;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 999;
 }
 
