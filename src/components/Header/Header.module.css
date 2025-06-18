@@ -27,14 +27,14 @@
   align-items: center;
 }
 
-.icons i {
+.icons .ii {
   color: #000000;
   font-size: 1.2rem;
   cursor: pointer;
   transition: transform 0.1s ease;
 }
 
-.icons i:hover {
+.icons .ii:hover {
   transform: scale(1.2);
 }
 
@@ -51,4 +51,31 @@
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.125rem;
+}
+
+.search input {
+  height: 40px;
+  display: flex;
+  width: 330px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.search {
+  position: relative;
+  margin-right: 100px;
+  width: 330px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #74705f;
+  pointer-events: none;
+  font-size: 16px;
 }
