@@ -23,7 +23,7 @@
 
 .icons {
   display: flex;
-  gap: 44px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -48,9 +48,9 @@
   font-family: Tahoma;
   color: #000000;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.1rem;
 }
 
 .search input {
