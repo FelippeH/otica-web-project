@@ -48,13 +48,13 @@ export default function Header() {
           />
         </div>
         <Link href="#produtos" className={styles.link}>
-          Óculos de grau
+          Óculos de Grau
         </Link>
         <Link href="#produtos" className={styles.link}>
-          Óculos de sol
+          Óculos de Sol
         </Link>
         <Link href="#produtos" className={styles.link}>
-          Lentes de contato
+          Lentes de Contato
         </Link>
         <Link href="#produtos" className={styles.link}>
           Acessórios
