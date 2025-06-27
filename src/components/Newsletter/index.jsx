@@ -37,6 +37,8 @@ export default function Newsletter() {
       }
     } catch (err) {
       alert("Erro na conexão com o servidor.");
+      setName("");
+      setEmail("");
     }
   };
 
