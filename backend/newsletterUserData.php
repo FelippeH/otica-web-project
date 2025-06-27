@@ -14,8 +14,11 @@ include 'config.php';
 $name = $_POST['nome'] ?? '';
 $email = $_POST['email'] ?? '';
 
-if (empty($name) || empty($email)) {
-    echo "Nome e email são obrigatórios!";
+if (empty($name) && empty($email)) {
+    echo json_encode([
+        "status" => "erro",
+        "mensagem" => "Nome e email são obrigatórios!"
+    ]);
     exit;
 }
 
