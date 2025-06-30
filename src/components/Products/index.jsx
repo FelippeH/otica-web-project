@@ -1,9 +1,40 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./Products.module.css";
 import Image from "next/image";
 import ProdList from "./ProdList";
 import { pGlasses, pSunglass } from "@/data/Products";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Products() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(pSunglass.length / itemsPerPage);
+
+  const nextPage = () => {
+    if (currentPage < totalPages - 1) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const startIndex = currentPage * itemsPerPage;
+  const visibleProducts = pSunglass.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
   return (
     <section className={styles.productsSection}>
       {/* Box com informações, posicionado na parte inferior do banner principal */}
@@ -50,10 +81,27 @@ export default function Products() {
       </div>
 
       {/* Grid do catálogo de óculos de sol */}
-      <div className={styles.gridInf}>
-        {pSunglass.map((catalog) => (
-          <ProdList key={catalog.id} product={catalog} />
-        ))}
+      <div className={styles.carouselCont}>
+        <button
+          onClick={prevPage}
+          disabled={currentPage === 0}
+          className={styles.arrow}
+        >
+          <FontAwesomeIcon icon={faCircleArrowLeft} />
+        </button>
+
+        <div className={styles.carouselProd}>
+          {visibleProducts.map((catalog) => (
+            <ProdList key={catalog.id} product={catalog} />
+          ))}
+        </div>
+        <button
+          onClick={nextPage}
+          disabled={currentPage === totalPages - 1}
+          className={styles.arrow}
+        >
+          <FontAwesomeIcon icon={faCircleArrowRight} />
+        </button>
       </div>
     </section>
   );
