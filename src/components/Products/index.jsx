@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Products.module.css";
 import Image from "next/image";
 import ProdList from "./ProdList";
@@ -14,7 +14,25 @@ import {
 
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 4;
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+
+  useEffect(() => {
+    const updateItems = () => {
+      if (window.innerWidth <= 768) {
+        setItemsPerPage(1);
+      } else {
+        setItemsPerPage(4);
+      }
+    };
+
+    updateItems();
+    window.addEventListener("resieze", updateItems);
+
+    return () => {
+      window.removeEventListener("resieze", updateItems);
+    };
+  }, []);
+
   const totalPages = Math.ceil(pSunglass.length / itemsPerPage);
 
   const nextPage = () => {
@@ -111,6 +129,11 @@ export default function Products() {
             className={styles.carouselArrow}
           />
         </button>
+      </div>
+      <div className={styles.mobileScroll}>
+        {pSunglass.map((catalog) => (
+          <ProdList key={catalog.id} product={catalog} />
+        ))}
       </div>
     </section>
   );

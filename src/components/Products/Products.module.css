@@ -162,3 +162,113 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+.mobileScroll {
+  display: none;
+}
+
+/*Media Queries*/
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 80px;
+  }
+
+  .textHeader h1 {
+    padding: 30px 80px;
+    font-size: 1.5rem;
+  }
+
+  .box {
+    gap: 60px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px;
+    width: 90%;
+  }
+
+  .carouselProd {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+
+  .textHeader h1 {
+    padding: 24px 40px;
+    font-size: 1.4rem;
+  }
+
+  .box {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .price,
+  .payment {
+    font-size: 0.85rem;
+  }
+  .carouselCont {
+    display: none;
+  }
+
+  .mobileScroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .mobileScroll a {
+    flex: 0 0 70%;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .carouselProd {
+    grid-template-columns: 1fr;
+  }
+
+  .textHeader h1 {
+    padding: 16px 20px;
+    font-size: 1.2rem;
+  }
+
+  .box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .price,
+  .payment {
+    font-size: 0.8rem;
+  }
+}
