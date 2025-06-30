@@ -8,8 +8,8 @@ import { pGlasses, pSunglass } from "@/data/Products";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Products() {
@@ -81,13 +81,19 @@ export default function Products() {
       </div>
 
       {/* Grid do catálogo de óculos de sol */}
+      <div className={styles.textHeader}>
+        <h1>As melhores opções em óculos de sol</h1>
+      </div>
       <div className={styles.carouselCont}>
         <button
           onClick={prevPage}
           disabled={currentPage === 0}
           className={styles.arrow}
         >
-          <FontAwesomeIcon icon={faCircleArrowLeft} />
+          <FontAwesomeIcon
+            icon={faChevronLeft}
+            className={styles.carouselArrow}
+          />
         </button>
 
         <div className={styles.carouselProd}>
@@ -100,7 +106,10 @@ export default function Products() {
           disabled={currentPage === totalPages - 1}
           className={styles.arrow}
         >
-          <FontAwesomeIcon icon={faCircleArrowRight} />
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={styles.carouselArrow}
+          />
         </button>
       </div>
     </section>
