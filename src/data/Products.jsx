@@ -138,4 +138,32 @@ export const pSunglass = [
     image: "/sunglass08.png",
     hoverImage: "/sunglass08_1.png",
   },
+  {
+    id: "óculos1",
+    title: "1057 - Medium Square G7 Black",
+    price: "R$ 0,00",
+    image: "/sunglass01.png",
+    hoverImage: "/sunglass01_1.png",
+  },
+  {
+    id: "óculos2",
+    title: "1261 - Big Round F2 Cinza",
+    price: "R$ 0,00",
+    image: "/sunglass02.png",
+    hoverImage: "/sunglass02_1.png",
+  },
+  {
+    id: "óculos3",
+    title: "1984 - Medium Square T5 Black",
+    price: "R$ 0,00",
+    image: "/sunglass03.png",
+    hoverImage: "/sunglass03_1.png",
+  },
+  {
+    id: "óculos4",
+    title: "1112 - Medium Round G1 Cinza",
+    price: "R$ 0,00",
+    image: "/sunglass04.png",
+    hoverImage: "/sunglass04_1.png",
+  },
 ];
