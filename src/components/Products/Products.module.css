@@ -129,17 +129,8 @@
   aspect-ratio: 1920 / 500;
   object-fit: cover;
   width: 100%;
-  margin: 60px 0;
+  margin-top: 60px;
   cursor: pointer;
-}
-
-.gridInf {
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 80px;
-  display: grid;
-  gap: 40px;
-  padding: 0 160px;
 }
 
 /*Carrossel dos óculos de sol*/
@@ -148,7 +139,6 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 7rem;
 }
 
 .carouselProd {
